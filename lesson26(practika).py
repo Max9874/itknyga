@@ -9,9 +9,9 @@ def encrypt_button_click():
     message = message_text_entry.get()
     key = int(key_entry.get())
 
-    for index in range(message):
+    for index in message:
         kod = ord(index) + key
-        encrypted_message += ord(kod)
+        encrypted_message += chr(kod)
     encrypted_text_entry.insert(0, encrypted_message)
 
 
